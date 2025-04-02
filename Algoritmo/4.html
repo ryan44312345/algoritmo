@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cálculo de média</h1>
+    <input type="number" id="nota1" placeholder="Coloque sua primeira nota">
+    <input type="number" id="nota2" placeholder="Coloque sua segunda nota">
+    <input type="number" id="nota3" placeholder="Coloque sua terceira nota">
+    <input type="number" id="nota4" placeholder="Coloque sua quarta nota">
+    <button onclick="media()">Média</button>
+    <p id="media"></p>
+
+    <script>
+        function media() {
+            var num1 = parseFloat(document.getElementById('nota1').value);
+            var num2 = parseFloat(document.getElementById('nota2').value);
+            var num3 = parseFloat(document.getElementById('nota3').value);
+            var num4 = parseFloat(document.getElementById('nota4').value);
+            var soma = num1 + num2 + num3 + num4;
+            var soma1 = soma/4;
+            document.getElementById('media').innerText = 'Sua média foi: ' + soma1;
+        }
+        
+    </script>
+</body>
+</html>

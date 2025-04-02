@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Explicação do códgio -->
+     <!-- Cria um display que aceita apenas números e decimais (type="number"), tem um id único para o JavaScript acessar e o placeholder serve para dar uma dica paa o usuário doque fazer -->
+    <input type="number" id="n1" placeholder="Digite o primeiro número">
+     <!--O mesmo que o primeiro input, o que muda é o id que é id="n2"  -->
+    <input type="number" id="n2" placeholder="Digite o segundo número">
+    <!-- Um botão com o texto "Somar" e contém o "onclick="soma()" que quando clicado, executa a função do js chamada soma()" -->
+    <button onclick="soma()">Somar</button>
+    <!-- É um paragráfo vazio que sera usado para o resultado final -->
+    <p id="resultado"></p>
+    <script>
+        // Java Script
+
+        // começa com a function que serve para deixar os códigos mais limpos, reutilizando o código defindo pela function
+
+        // a function ela tem o nome de "soma()" que serve para reutilizar a function
+        function soma() {
+        // o var num1 Armazena número colocado pelo usuário em uma variável
+
+        // O parseFloat() converte o valor para um número decimal (ponto flutuante), transformando o número em um número utilizado
+
+        // O document.getElementById('n1') Localiza o elemento com o id="n1" (o primeiro input)
+
+        // O .value obtém o valor digitado pelo usuário no input
+        var num1 = parseFloat(document.getElementById('n1').value);
+        // Faz o mesmo que o var num2 a única diferença é o id="n2"
+        var num2 = parseFloat(document.getElementById('n2').value);
+        // Soma os dois números e armazena na variável soma
+        var soma = num1 + num2;
+        // O document.getElementById ele serve para localizar o id de algo
+
+        // Localiza o parágrafo com o id='resultado'
+
+        // O .innerText define o texto dentro do parágrafo
+
+        // 'resultado: ' + soma é oque vai estar escrito no parágrafo
+        document.getElementById('resultado').innerText = 'resultado: ' + soma;
+    }
+    </script>
+</body>
+</html>
